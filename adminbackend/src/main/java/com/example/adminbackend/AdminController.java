@@ -1,8 +1,7 @@
 package com.example.adminbackend;
 
-import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -228,7 +227,7 @@ public class AdminController {
         return OCR != null ? ResponseEntity.ok(OCR) : ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/get/ocr/id/{btecId}")
+    @GetMapping("/get/ocr/id/{ocrCaID}")
     public ResponseEntity<Ocr> getOCRById(@PathVariable Integer ocrCaID) {
         Ocr ocr = ocrRepository.findByOCRId(ocrCaID);
         return ocr != null ? ResponseEntity.ok(ocr) : ResponseEntity.notFound().build();
@@ -246,7 +245,7 @@ public class AdminController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping("/remove/ocr/id/{btecId}")
+    @DeleteMapping("/remove/ocr/id/{ocrCaID}")
     public ResponseEntity<Void> removeOCRById(@PathVariable Integer ocrCaID) {
         ocrRepository.removeOCRByOCRID(ocrCaID);
         return ResponseEntity.ok().build();
@@ -274,7 +273,7 @@ public class AdminController {
         return heDiploma != null ? ResponseEntity.ok(heDiploma) : ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/get/he/id/{btecId}")
+    @GetMapping("/get/ocr/id/{heID}")
     public ResponseEntity<HEDiploma> getHEById(@PathVariable Integer heID) {
         HEDiploma heDiploma = hediplomaRepository.findByHEID(heID);
         return heDiploma != null ? ResponseEntity.ok(heDiploma) : ResponseEntity.notFound().build();
@@ -292,10 +291,184 @@ public class AdminController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping("/remove/he/id/{btecId}")
-    public ResponseEntity<Void> removHEById(@PathVariable Integer heID) {
+    @DeleteMapping("/remove/he/id/{heID}")
+    public ResponseEntity<Void> removeHEById(@PathVariable Integer heID) {
         hediplomaRepository.removeHEByHEID(heID);
         return ResponseEntity.ok().build();
     }
 
+
+    @Autowired
+    private CareerDegreeRepository careerDegreeRepository;
+
+    @PostMapping("/add/careerdegree")
+    public ResponseEntity<CareerDegree> addCareerDegree(@RequestBody CareerDegree careerDegree) {
+        careerDegreeRepository.save(careerDegree);
+        return ResponseEntity.ok(careerDegree);
+    }
+
+    @GetMapping("/get/careerdegree/{careerDegreeID}")
+    public ResponseEntity<CareerDegree> getCareerDegreeByID(@PathVariable Integer careerDegreeID) {
+        CareerDegree careerDegree = careerDegreeRepository.findByCareerDegreeID(careerDegreeID);
+        return careerDegree != null ? ResponseEntity.ok(careerDegree) : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/get/careerdegree/byDegree/{degreeID}")
+    public ResponseEntity<List<CareerDegree>> getCareerDegreeByDegreeID(@PathVariable Integer degreeID) {
+        List<CareerDegree> careerDegrees = careerDegreeRepository.findByDegreeID(degreeID);
+        return careerDegrees.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(careerDegrees);
+    }
+
+    @GetMapping("/get/careerdegree/byCareer/{careerID}")
+    public ResponseEntity<List<CareerDegree>> getCareerDegreeByCareerID(@PathVariable Integer careerID) {
+        List<CareerDegree> careerDegrees = careerDegreeRepository.findByCareerID(careerID);
+        return careerDegrees.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(careerDegrees);
+    }
+
+    @DeleteMapping("/delete/careerdegree/{careerDegreeID}")
+    public ResponseEntity<Void> deleteCareerDegreeByID(@PathVariable Integer careerDegreeID) {
+        careerDegreeRepository.deleteByCareerDegreeID(careerDegreeID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/careerdegree/byDegree/{degreeID}")
+    public ResponseEntity<Void> deleteCareerDegreeByDegreeID(@PathVariable Integer degreeID) {
+        careerDegreeRepository.deleteByDegreeID(degreeID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/careerdegree/byCareer/{careerID}")
+    public ResponseEntity<Void> deleteCareerDegreeByCareerID(@PathVariable Integer careerID) {
+        careerDegreeRepository.deleteByCareerID(careerID);
+        return ResponseEntity.ok().build();
+    }
+
+
+    @Autowired
+    private ModulesDegreeRepository modulesDegreeRepository;
+
+    @PostMapping("/add/modulesdegree")
+    public ResponseEntity<ModulesDegree> addModuleDegree(@RequestBody ModulesDegree modulesDegree) {
+        modulesDegreeRepository.save(modulesDegree);
+        return ResponseEntity.ok(modulesDegree);
+    }
+
+    @GetMapping("/get/modulesdegree/{modulesDegreeID}")
+    public ResponseEntity<ModulesDegree> getModulesDegreeByID(@PathVariable Integer modulesDegreeID) {
+        ModulesDegree modulesDegree = modulesDegreeRepository.findByModuleDegreeID(modulesDegreeID);
+        return modulesDegree != null ? ResponseEntity.ok(modulesDegree) : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/get/modulesdegree/byDegree/{degreeID}")
+    public ResponseEntity<List<ModulesDegree>> getModulesDegreeByDegreeID(@PathVariable Integer degreeID) {
+        List<ModulesDegree> modulesDegrees = modulesDegreeRepository.findByDegreeID(degreeID);
+        return modulesDegrees.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(modulesDegrees);
+    }
+
+    @GetMapping("/get/modulesdegree/byModule/{moduleID}")
+    public ResponseEntity<List<ModulesDegree>> getModulesDegreeByModuleID(@PathVariable Integer moduleID) {
+        List<ModulesDegree> modulesDegrees = modulesDegreeRepository.findByModuleID(moduleID);
+        return modulesDegrees.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(modulesDegrees);
+    }
+
+    @DeleteMapping("/delete/modulesdegree/{moduleDegreeID}")
+    public ResponseEntity<Void> deleteModuleDegreeByID(@PathVariable Integer moduleDegreeID) {
+        modulesDegreeRepository.deleteByModuleDegreeID(moduleDegreeID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/modulesdegree/byDegree/{degreeID}")
+    public ResponseEntity<Void> deleteModuleDegreeByDegreeID(@PathVariable Integer degreeID) {
+        modulesDegreeRepository.deleteByDegreeID(degreeID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/modulesdegree/byModule/{moduleID}")
+    public ResponseEntity<Void> deleteModuleDegreeByModuleID(@PathVariable Integer moduleID) {
+        modulesDegreeRepository.deleteByModuleID(moduleID);
+        return ResponseEntity.ok().build();
+    }
+
+
+    @Autowired
+    private EntryRequirementRepository entryRequirementRepository;
+
+    @PostMapping("/add/entryrequirement")
+    public ResponseEntity<EntryRequirement> addEntryRequirement(@RequestBody EntryRequirement entryRequirement) {
+        entryRequirementRepository.save(entryRequirement);
+        return ResponseEntity.ok(entryRequirement);
+    }
+
+    @GetMapping("/get/entryrequirement/{requirementID}")
+    public ResponseEntity<EntryRequirement> getEntryRequirementByID(@PathVariable Integer requirementID) {
+        EntryRequirement entryRequirement = entryRequirementRepository.findByRequirementID(requirementID);
+        return entryRequirement != null ? ResponseEntity.ok(entryRequirement) : ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/get/entryrequirement/byDegree/{degreeId}")
+    public ResponseEntity<List<EntryRequirement>> getEntryRequirementByDegreeID(@PathVariable Integer degreeId) {
+        List<EntryRequirement> entryRequirements = entryRequirementRepository.findByDegreeID(degreeId);
+        return entryRequirements.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(entryRequirements);
+    }
+
+    @GetMapping("/get/entryrequirement/byAlevel/{alevelID}")
+    public ResponseEntity<List<EntryRequirement>> getEntryRequirementByALevelID(@PathVariable Integer alevelID) {
+        List<EntryRequirement> entryRequirements = entryRequirementRepository.findByALevelID(alevelID);
+        return entryRequirements.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(entryRequirements);
+    }
+
+    @GetMapping("/get/entryrequirement/byBtec/{btecID}")
+    public ResponseEntity<List<EntryRequirement>> getEntryRequirementByBtecID(@PathVariable Integer btecID) {
+        List<EntryRequirement> entryRequirements = entryRequirementRepository.findByBtecID(btecID);
+        return entryRequirements.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(entryRequirements);
+    }
+
+    @GetMapping("/get/entryrequirement/byOcr/{ocrCaID}")
+    public ResponseEntity<List<EntryRequirement>> getEntryRequirementByOcrCaID(@PathVariable Integer ocrCaID) {
+        List<EntryRequirement> entryRequirements = entryRequirementRepository.findByOCRcaID(ocrCaID);
+        return entryRequirements.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(entryRequirements);
+    }
+
+    @GetMapping("/get/entryrequirement/byHeDiploma/{heID}")
+    public ResponseEntity<List<EntryRequirement>> getEntryRequirementByHeDiplomaID(@PathVariable Integer heID) {
+        List<EntryRequirement> entryRequirements = entryRequirementRepository.findByHeID(heID);
+        return entryRequirements.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(entryRequirements);
+    }
+
+
+    @DeleteMapping("/delete/entryrequirement/{requirementID}")
+    public ResponseEntity<Void> deleteEntryRequirementByID(@PathVariable Integer requirementID) {
+        entryRequirementRepository.deleteByRequirementID(requirementID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/entryrequirement/byDegree/{degreeID}")
+    public ResponseEntity<Void> deleteEntryRequirementByDegreeID(@PathVariable Integer degreeID) {
+        entryRequirementRepository.deleteByDegreeID(degreeID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/entryrequirement/byAlevel/{alevelID}")
+    public ResponseEntity<Void> deleteEntryRequirementByALevelID(@PathVariable Integer alevelID) {
+        entryRequirementRepository.deleteByDegreeID(alevelID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/entryrequirement/byBtec/{btecID}")
+    public ResponseEntity<Void> deleteEntryRequirementByBtecID(@PathVariable Integer btecID) {
+        entryRequirementRepository.deleteByDegreeID(btecID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/entryrequirement/byOcr/{ocrCaID}")
+    public ResponseEntity<Void> deleteEntryRequirementByOcrCaID(@PathVariable Integer ocrCaID) {
+        entryRequirementRepository.deleteByDegreeID(ocrCaID);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/delete/entryrequirement/byHeDiploma/{heID}")
+    public ResponseEntity<Void> deleteEntryRequirementByHeDiplomaID(@PathVariable Integer heID) {
+        entryRequirementRepository.deleteByDegreeID(heID);
+        return ResponseEntity.ok().build();
+    }
 }

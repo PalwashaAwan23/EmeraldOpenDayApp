@@ -1,5 +1,6 @@
 package com.example.adminbackend;
 
+import org.hibernate.engine.spi.ManagedEntity;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,22 +17,63 @@ public class AdminBackendApplication {
 	}
 
 	@Bean
-	CommandLineRunner run(DegreeRepository degreeRepository, AdminController controller, CareerInfoRepository careerInfoRepository,
-						  CareerDegreeRepository careerDegreeRepository) {
+	CommandLineRunner run(DegreeRepository degreeRepository, AdminController controller,
+						  EntryRequirementRepository entryRequirementRepository, ALevelRepository aLevelRepository,
+						  BtecRepository btecRepository, OcrRepository ocrRepository, HEDiplomaRepository heDiplomaRepository) {
 		return args -> {
+
+//			ResponseEntity<Degree> degreeResponse = controller.getDegreeById(6);
+//			Degree degree = degreeResponse.getBody();
 //
-			Degree degree = degreeRepository.findById(1).orElse(null);
-			CareerInfo career = careerInfoRepository.findById(1).orElse(null);
+//			ResponseEntity<ALevel> aLevelResponseEntity = controller.getAlevelById(1);
+//			ALevel aLevel = aLevelResponseEntity.getBody();
+//
+//			ResponseEntity<Ocr> ocrResponseEntity = controller.getOCRById(1);
+//			Ocr ocr = ocrResponseEntity.getBody();
+//
+//			ResponseEntity<Btec> btecResponseEntity = controller.getBTECById(1);
+//			Btec btec = btecResponseEntity.getBody();
+//
+//			ResponseEntity<HEDiploma> heDiplomaResponseEntity = controller.getHEById(1);
+//			HEDiploma hediploma = heDiplomaResponseEntity.getBody();
+//
+//			System.out.println(hediploma.getHeID());
+//
+//			System.out.println(degree.getDegreeName());
+//			if (degree == null || aLevel == null || ocr == null  || btec == null || hediploma == null ) {
+//				System.err.println("Error: Degree or Module with ID 1 not found.");
+//				return;
+//			}
+//
+//			EntryRequirement entryRequirement= new EntryRequirement(null, 120,  degree, aLevel, btec, ocr, hediploma);
+//			entryRequirementRepository.save(entryRequirement);
+//			System.out.println("Entry Requirement saved.");
 
-			if (degree == null || career == null) {
-				System.out.println("Error: Degree or CareerInfo with ID 1 not found.");
-				return;
-			}
+			EntryRequirement entryRequirement = entryRequirementRepository.findByRequirementID(1);
+			System.out.println("Requirement ID is " + entryRequirement.getRequirementID());
+			System.out.println("Degree Name is " + entryRequirement.getDegreeER().getDegreeName());
+			System.out.println("ALevel is " + entryRequirement.getALevel().getAlevelID());
+			System.out.println("BTEC is " + entryRequirement.getBtec().getBtecID());
+			System.out.println("OCR is " + entryRequirement.getOcr().getOcrCaID());
+			System.out.println("HE is " + entryRequirement.getHeD().getHeID());
 
-			// Save new CareerDegree entry
-			CareerDegree careerDegree = new CareerDegree(null, degree, career);
-			careerDegreeRepository.save(careerDegree);
-			System.out.println("CareerDegree entry added with ID: " + careerDegree.getCareerDegreeID());
+
+//			Integer moduleDegreeID = 1;
+//
+//
+//			ResponseEntity<ModulesDegree> response = controller.getModulesDegreeByID(1);
+//
+//
+//			ModulesDegree modulesDegree = response.getBody();
+//
+//			if (modulesDegree != null) {
+//				System.out.println("CareerDegree found with ID: " + modulesDegree.getModuleDegreeID());
+//				System.out.println("Degree ID: " + modulesDegree.getDegreeMDId().getDegreeName());
+//				System.out.println("Career ID: " + modulesDegree.getModuleMDId().getModuleName());
+//			} else {
+//				System.out.println("CareerDegree not found with ID: " + moduleDegreeID);
+//			}
+
 
 
 		};

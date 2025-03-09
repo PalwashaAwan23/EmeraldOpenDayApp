@@ -1,6 +1,8 @@
 package com.example.adminbackend;
 
+import jakarta.persistence.Entity;
 import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -34,7 +36,7 @@ public interface ALevelRepository extends JpaRepository<ALevel, Integer> {
 
     @Modifying
     @Transactional
-    @Query("DELETE FROM ALevel c WHERE c.alevelID = :ALevelID")
-    void removeALevelByAlevelID(@Param("ALevelID") Integer ALevelID);
+    @Query("DELETE FROM ALevel c WHERE c.alevelID = :aLevelID")
+    void removeALevelByAlevelID(@Param("aLevelID") Integer aLevelID);
 
 }

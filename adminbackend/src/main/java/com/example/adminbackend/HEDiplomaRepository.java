@@ -17,7 +17,7 @@ public interface HEDiplomaRepository extends JpaRepository<HEDiploma, Integer> {
     @Query("SELECT c FROM HEDiploma c WHERE c.maxGrade = :maxGrade")
     HEDiploma findByHEMaxGrade(@Param("maxGrade") String maxGrade);
 
-    @Query("SELECT c FROM HEDiploma c WHERE c.heID = :heID")
+    @Query("SELECT c FROM HEDiploma c WHERE c.heID = :heId")
     HEDiploma findByHEID(@Param("heId") Integer heId);
 
 
