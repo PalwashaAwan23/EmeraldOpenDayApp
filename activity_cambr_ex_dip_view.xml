@@ -1,0 +1,130 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CambrExDip_View">
+
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/view_id_from_ocr_cambridge_l3_technical_extended_diploma_tabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="226dp"
+        android:layout_height="78dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/wlv_open_day_database10"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-2dp" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="391dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#48444E"
+        android:fontFamily="@font/cabinm"
+        android:text="@string/view2"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword2"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <EditText
+        android:id="@+id/etPassword2"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="312dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/ocr_cambridge_l3_technical_extended_diploma_mingrade"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword3"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="244dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/ocr_cambridge_l3_technical_extended_diploma_maxgrade"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword4"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="376dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/ocr_cambridge_l3_technical_extended_diploma"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="309dp"
+        android:layout_height="126dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/OCRView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ModuleDegree_Add">
+
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="343dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="368dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_degree_degree_id_to_module_degree_tabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="358dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_modules_module_id_to_module_degree_tabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword4"
+        app:layout_constraintVertical_bias="0.093" />
+
+    <EditText
+        android:id="@+id/etPassword4"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/degree_degree_id2"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView56"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <EditText
+        android:id="@+id/etPassword3"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/modules_module_id"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView57"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="322dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#48444E"
+        android:fontFamily="@font/cabinm"
+        android:text="@string/add11"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword3" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="226dp"
+        android:layout_height="78dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/wlv_open_day_database26"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

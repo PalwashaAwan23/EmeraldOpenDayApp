@@ -1,0 +1,124 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".alevel_add">
+
+    <!-- This ImageView is kept at its original position -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-2dp" />
+
+    <!-- Title -->
+
+    <!-- Label for ALevel ID -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/wlv_open_day_database"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText for ALevel ID -->
+
+    <!-- Label for minimum Grade -->
+
+    <!-- EditText for minimum Grade -->
+
+    <TextView
+        android:id="@+id/tvAddMinGradeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_minimum_grade_to_alevel_tabel"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <EditText
+        android:id="@+id/etMinGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/minimum_grade"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        app:layout_constraintTop_toBottomOf="@id/tvAddMinGradeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Label for maximum Grade -->
+    <TextView
+        android:id="@+id/tvAddMaxGradeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_maximum_grade_to_alevel_tabel"
+        android:textSize="20sp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/etMinGrade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- EditText for maximum Grade -->
+    <EditText
+        android:id="@+id/etMaxGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/maximum_grade"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        app:layout_constraintTop_toBottomOf="@id/tvAddMaxGradeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="322dp"
+        android:layout_height="54dp"
+        android:layout_margin="24dp"
+        android:backgroundTint="#48444E"
+        android:fontFamily="@font/cabinm"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMaxGrade"
+        app:layout_constraintVertical_bias="0.282" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CareerDegree_View">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-2dp" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="347dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/view_id_from_career_degree_tabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="371dp"
+        android:layout_height="153dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/CareerDegreeView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView40"
+        app:layout_constraintVertical_bias="0.948" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="226dp"
+        android:layout_height="78dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/wlv_open_day_database13"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="322dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#48444E"
+        android:fontFamily="@font/cabinm"
+        android:text="@string/view3"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword2"
+        app:layout_constraintVertical_bias="0.443" />
+
+    <EditText
+        android:id="@+id/etPassword2"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/career_degree_id"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <EditText
+        android:id="@+id/etPassword19"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/degree_id"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <EditText
+        android:id="@+id/etPassword20"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/career_id"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.353" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,243 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".EntryRequirement_Add">
+
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="-2dp" />
+
+    <!-- Title -->
+
+    <!-- Required ID -->
+
+    <!-- UCAS Points -->
+
+    <!-- Degree ID -->
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/wlv_open_day_database19"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ucasPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_ucas_points_to_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ucasPointsInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/ucas_points"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ucasPointsText" />
+
+    <!-- A-Level ID -->
+
+    <TextView
+        android:id="@+id/degreeIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_id_degree_degree_to_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ucasPointsInput" />
+
+    <EditText
+        android:id="@+id/degreeIDInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/degree_id"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/degreeIDText" />
+
+    <!-- BTEC ID -->
+
+    <!-- Add Button -->
+
+    <TextView
+        android:id="@+id/alevelIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="@string/add_id_alevel_alevel_to_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/degreeIDInput" />
+
+    <EditText
+        android:id="@+id/alevelIDInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/alevel_id"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alevelIDText" />
+
+    <TextView
+        android:id="@+id/btecIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_id_btecexdipl_btec_to_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alevelIDInput" />
+
+    <TextView
+        android:id="@+id/btecIDText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_id_ocr_to_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alevelIDInput" />
+
+    <TextView
+        android:id="@+id/btecIDText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/cabinm"
+        android:gravity="center"
+        android:text="@string/add_id_to_he_diploma_table"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alevelIDInput" />
+
+    <EditText
+        android:id="@+id/btecIDInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/btec_id"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btecIDText" />
+
+    <EditText
+        android:id="@+id/ocrIDInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="104dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/ocr_cambridge_id2"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btecIDText" />
+
+    <EditText
+        android:id="@+id/heIDInput"
+        android:layout_width="375dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_outline"
+        android:fontFamily="@font/cabinm"
+        android:hint="@string/he_diploma_id"
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btecIDText" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="322dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="196dp"
+        android:backgroundTint="#48444E"
+        android:fontFamily="@font/cabinm"
+        android:text="@string/add7"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btecIDInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
